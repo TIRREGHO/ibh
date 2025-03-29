@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+    <link rel="icon" href="Assets/logo.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #0051A2; /* Gleiche Farbe wie Footer */
+            transform: translateY(0);
+            transition: transform 1s ease;
+            position: fixed;
+            padding:0px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+        .navbar .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        .navbar .navbar-brand img {
+            height: 50px;
+            margin-right: 10px; /* Abstand zwischen Logo und Text */
+        }
+        .navbar-toggler {
+            z-index: 5;
+        }
+        .navbar-nav {
+            margin-left: auto; /* Positionierung der Links rechts */
+        }
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.585); /* Standardfarbe für Links */
+            transition: color 0.3s ease; /* Sanfter Übergang */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFFFFF; /* Hover-Farbe auf Weiß ändern */
+        }
+        .video-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Keine Ränder */
+        }
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .text-section, .text-section-right {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 2em;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .text-section img, .text-section-right img {
+            width: 40%;
+            margin-right: 10px;
+        }
+        .text-section-right img {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+        .text-section-right {
+            flex-direction: row-reverse;
+        }
+        .footer {
+            background-color: #0051A2;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            z-index: 10;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(0);
+            transition: transform 1s ease;
+        }
+        .footer a {
+            text-decoration: underline;
+            color: white;
+        }
+        .content {
+            flex: 1; /* Inhalt erhält dynamischen Platz */
+            display: flex; /* Flexbox aktivieren */
+            flex-direction: column; /* Stellt den Text vertikal dar */
+            justify-content: center; /* Vertikale Zentrierung */
+            align-items: center; /* Horizontale Zentrierung */
+            text-align: center; /* Zentriert den Text innerhalb des Containers */
+            padding: 20px; /* Abstand für Lesbarkeit */
+            margin-top: 60px;
+        }
+
+        .section-title {
+            font-size: 2rem; /* Überschrift größer machen */
+            font-weight: bold; /* Fett darstellen */
+            margin-bottom: 20px; /* Abstand nach unten */
+            color: #0051A2; /* Farbe passend zur Navbar */
+        }
+
+        .text-group {
+            text-align: left; /* Punkte und Wörter linksbündig für bessere Lesbarkeit */
+            max-width: 600px; /* Breite begrenzen, um alles kompakt zu halten */
+            margin: 0 auto; /* Horizontal zentrieren */
+            line-height: 1.8; /* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
+        }
+        @media (max-width: 991px){
+            .titletext{
+                color: transparent;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navbar">
+        <div class="container-fluid" style="    justify-content: center;">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/logo.jpg" alt="Logo">
+            </a>
+            <p class="titletext" style="color: #FFFFFF;font-weight: 600;position:fixed; font-size: 25px;margin: 0px;padding: 0px; vertical-align: center; ">Ingenieurbüro Dipl.-Ing. G. Hoffmann</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="references.html">Referenzen</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 class="section-title">Impressum</h1>
+        <div class="text-group">
+            <p><strong>Angaben gemäß § 5 TMG</strong></p>
+            <p>
+                Matthias Hoffmann<br>
+                Ingenieurbüro Dipl.-Ing. G. Hoffmann<br>
+                Nordweg 23<br>
+                14913 Jüterbog
+            </p>
+    
+            <p><strong>Kontakt</strong></p>
+            <p>
+                Telefon: +49 (0) 3372 40 45 82<br>
+                Telefax: +49 (0) 3372 40 45 83<br>
+                E-Mail: IBH-Planung@t-online.de
+            </p>
+    
+            <p><strong>Berufsbezeichnung und berufsrechtliche Regelungen</strong></p>
+            <p>
+                Berufsbezeichnung: Dip.-Ing. (TU) für Bauwesen<br>
+                Zuständige Kammer: Brandenburgische Ingenieurkammer<br>
+                Verliehen durch: Es gelten folgende berufsrechtliche Regelungen: Brandenburgisches Ingenieurgesetz und Kammerordnungen<br>
+                Regelungen einsehbar unter: 
+                <a href="https://www.bbik.de/informationen/recht-u-gesetze/kammerrecht/" target="_blank">
+                    https://www.bbik.de/informationen/recht-u-gesetze/kammerrecht/
+                </a>
+            </p>
+    
+            <p><strong>Angaben zur Berufshaftpflichtversicherung</strong></p>
+            <p>
+                Name und Sitz des Versicherers:<br>
+                Gothaer Allgemeine Versicherung AG<br>
+                Hauptverwaltung<br>
+                50598 Köln<br>
+                Geltungsraum der Versicherung: EU
+            </p>
+    
+            <p>
+                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+            </p>
+    
+            <h2>Haftung für Inhalte</h2>
+            <p>
+                Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+            </p>
+            <p>
+                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+            </p>
+    
+            <h2>Haftung für Links</h2>
+            <p>
+                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+            </p>
+            <p>
+                Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+            </p>
+    
+            <h2>Urheberrecht</h2>
+            <p>
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+            </p>
+            <p>
+                Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+            </p>
+    
+            <p><small>Quelle: <a href="https://www.e-recht24.de/impressum-generator.html" target="_blank">https://www.e-recht24.de/impressum-generator.html</a></small></p>
+        </div>
+    </div>
+    
+
+   
+    
+    
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>&copy; 2025 Ingenieurbüro Dipl.-Ing. G. Hoffmann. Alle Rechte vorbehalten. 
+            <a href="impres.html">Impressum</a> | 
+            <a href="policy.html">Datenschutzerklärung</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

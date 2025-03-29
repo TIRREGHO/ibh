@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung</title>
+    <link rel="icon" href="Assets/logo.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #0051A2; /* Gleiche Farbe wie Footer */
+            transform: translateY(0);
+            transition: transform 1s ease;
+            position: fixed;
+            padding:0px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .navbar .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        .navbar .navbar-brand img {
+            height: 50px;
+            margin-right: 10px; /* Abstand zwischen Logo und Text */
+        }
+        .navbar-toggler {
+            z-index: 5;
+        }
+        .navbar-nav {
+            margin-left: auto; /* Positionierung der Links rechts */
+        }
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.585); /* Standardfarbe für Links */
+            transition: color 0.3s ease; /* Sanfter Übergang */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFFFFF; /* Hover-Farbe auf Weiß ändern */
+        }
+        .video-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Keine Ränder */
+        }
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .text-section, .text-section-right {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 2em;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .text-section img, .text-section-right img {
+            width: 40%;
+            margin-right: 10px;
+        }
+        .text-section-right img {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+        .text-section-right {
+            flex-direction: row-reverse;
+        }
+        .footer {
+            background-color: #0051A2;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            z-index: 10;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(0);
+            transition: transform 1s ease;
+        }
+        .footer a {
+            text-decoration: underline;
+            color: white;
+        }
+        .content {
+            flex: 1; /* Inhalt erhält dynamischen Platz */
+            display: flex; /* Flexbox aktivieren */
+            flex-direction: column; /* Stellt den Text vertikal dar */
+            justify-content: center; /* Vertikale Zentrierung */
+            align-items: center; /* Horizontale Zentrierung */
+            text-align: center; /* Zentriert den Text innerhalb des Containers */
+            padding: 20px; /* Abstand für Lesbarkeit */
+            margin-top: 60px;
+        }
+
+        .section-title {
+            font-size: 2rem; /* Überschrift größer machen */
+            font-weight: bold; /* Fett darstellen */
+            margin-bottom: 20px; /* Abstand nach unten */
+            color: #0051A2; /* Farbe passend zur Navbar */
+        }
+
+        .text-group {
+            text-align: left; /* Punkte und Wörter linksbündig für bessere Lesbarkeit */
+            max-width: 600px; /* Breite begrenzen, um alles kompakt zu halten */
+            margin: 0 auto; /* Horizontal zentrieren */
+            line-height: 1.8; /* Erhöhte Zeilenhöhe für bessere Lesbarkeit */
+        }
+        @media (max-width: 991px){
+            .titletext{
+                color: transparent;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navbar">
+        <div class="container-fluid" style="    justify-content: center;">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/logo.jpg" alt="Logo">
+            </a>
+            <p class="titletext" style="color: #FFFFFF;font-weight: 600;position:fixed; font-size: 25px;margin: 0px;padding: 0px; vertical-align: center; ">Ingenieurbüro Dipl.-Ing. G. Hoffmann</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="references.html">Referenzen</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="content">
+        <h1 class="section-title">Datenschutzerklärung</h1>
+        <div class="text-group">
+            <p>Als Anbieter dieser Internetseiten sind wir gesetzlich verpflichtet, Sie über Zweck, Umfang und Art der Erhebung und Verwendung Ihrer personenbezogenen Daten zu informieren. Damit Sie ein gutes Gefühl dafür bekommen, auf welche Art und Weise wir Daten erheben, verarbeiten und nutzen, möchten wir einen Überblick über die Datenverarbeitung geben. Bei weiteren Fragen dürfen Sie sich selbstverständlich jederzeit gerne an uns wenden.</p>
+    
+            <p><strong>Verantwortlicher im Sinne der Datenschutzgesetze:</strong></p>
+            <ul>
+                <li>Dipl.-Ing. (TU) Matthias Hoffmann</li>
+                <li>Nordweg 23</li>
+                <li>14913 Jüterbog</li>
+                <li>E-Mail-Adresse: IBH-Planung@t-online.de</li>
+                <li>Telefon: +49 (0) 3372 40 45 82</li>
+            </ul>
+    
+            <h2>Bereitstellung der Website / Webhosting</h2>
+            <p><strong>Art und Zweck der Verarbeitung:</strong> Um unsere Website sicher und effizient bereitzustellen, nehmen wir die Leistungen eines oder mehrerer Webhosting-Anbieter in Anspruch. Informationen wie die Adresse und Name der abgerufenen Webseiten, Datum und Uhrzeit des Abrufs, Browsertyp, IP-Adresse und weitere werden automatisch verarbeitet.</p>
+    
+            <p><strong>Rechtsgrundlagen:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) bzw. berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f. DSGVO)</p>
+    
+            <h2>E-Mail-Kommunikation und -Hosting</h2>
+            <p><strong>Art und Zweck der Verarbeitung:</strong> Die von uns in Anspruch genommenen Webhosting-Leistungen umfassen Versand, Empfang sowie Speicherung von E-Mails. Dabei können Kontakt-, Nutzungs- und Vertragsdaten verarbeitet werden.</p>
+    
+            <h2>Einsatz von Cookies</h2>
+            <p>Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden, wenn Sie unsere Webseite besuchen. Sie ermöglichen Navigation und korrekte Anzeige unserer Inhalte. Sie können jederzeit die Verwendung von Cookies über Ihren Browser deaktivieren.</p>
+    
+            <h2>Ihre Betroffenenrechte</h2>
+            <p>Sie können jederzeit folgende Rechte ausüben:</p>
+            <ul>
+                <li>Auskunft über Ihre bei uns gespeicherten Daten (Art. 15 DSGVO)</li>
+                <li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO)</li>
+                <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
+                <li>Einschränkung der Datenverarbeitung (Art. 18 DSGVO)</li>
+                <li>Widerspruch gegen die Verarbeitung Ihrer Daten (Art. 21 DSGVO)</li>
+                <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            </ul>
+            <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen und sich bei einer Aufsichtsbehörde beschweren.</p>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>&copy; 2025 Ingenieurbüro Dipl.-Ing. G. Hoffmann. Alle Rechte vorbehalten. 
+            <a href="impres.html">Impressum</a> | 
+            <a href="policy.html">Datenschutzerklärung</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

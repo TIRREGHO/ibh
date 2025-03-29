@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingenieurbüro Dipl.-Ing. G. Hoffmann</title>
+    <link rel="icon" href="Assets/logo.jpg" type="image/jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #0051A2; /* Gleiche Farbe wie Footer */
+            transform: translateY(-100%);
+            transition: transform 1s ease;
+            position: fixed;
+            padding:0px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .navbar .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+        .navbar .navbar-brand img {
+            height: 50px;
+            margin-right: 10px; /* Abstand zwischen Logo und Text */
+        }
+        .navbar-toggler {
+            z-index: 5;
+        }
+        .navbar-nav {
+            margin-left: auto; /* Positionierung der Links rechts */
+        }
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.585); /* Standardfarbe für Links */
+            transition: color 0.3s ease; /* Sanfter Übergang */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFFFFF; /* Hover-Farbe auf Weiß ändern */
+        }
+        .video-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Keine Ränder */
+        }
+        .video-section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .text-section, .text-section-right {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 2em;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .text-section img, .text-section-right img {
+            width: 40%;
+            margin-right: 10px;
+        }
+        .text-section-right img {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+        .text-section-right {
+            flex-direction: row-reverse;
+        }
+        .footer {
+            background-color: #0051A2;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            z-index: 10;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(100%);
+            transition: transform 1s ease;
+        }
+        .footer a {
+            text-decoration: underline;
+            color: white;
+        }
+        @media (max-width: 991px){
+            .titletext{
+                color: transparent;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="navbar">
+        <div class="container-fluid" style="    justify-content: center;">
+            <a class="navbar-brand" href="#">
+                <img src="Assets/logo.jpg" alt="Logo">
+            </a>
+            <p class="titletext" style="color: #FFFFFF;font-weight: 600;position:fixed; font-size: 25px;margin: 0px;padding: 0px; vertical-align: center; ">Ingenieurbüro Dipl.-Ing. G. Hoffmann</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="references.html">Referenzen</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Section -->
+    <div class="video-section" id="video">
+        <video autoplay muted loop>
+            <source src="Assets/video.mp4" type="video/mp4">
+            Ihr Browser unterstützt kein Video-Tag.
+        </video>
+    </div>
+
+    <!-- Text Section -->
+    <div class="text-section" id="text">
+        <img src="Assets/foto.jpg" alt="Beispielbild">
+        <div>
+            <h1 style="font-weight: 600;">Leistungen</h1>
+            <h3>Beratung</h3>
+            <h3>Bauplanung</h3>
+            <h3>Bauüberwachung</h3>
+            <h3>Bestandspläne</h3>
+        </div>
+    </div>
+
+    <!-- Text Section Right -->
+    <div class="text-section-right" id="text-right">
+        <img src="Assets/foto2.jpg" alt="Beispielbild Rechts">
+        <div>
+            <h1 style="font-weight: 600;">Bereiche</h1>
+            <h3>Straßenbau</h3>
+            <h3>Abwasserentsorgung</h3>
+            <h3>Wasserversorgung</h3>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>&copy; 2025 Ingenieurbüro Dipl.-Ing. G. Hoffmann. Alle Rechte vorbehalten. 
+            <a href="impres.html">Impressum</a> | 
+            <a href="policy.html">Datenschutzerklärung</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar von oben einblenden
+        document.addEventListener("DOMContentLoaded", () => {
+            const navbar = document.getElementById("navbar");
+            setTimeout(() => {
+                navbar.style.transform = "translateY(0)";
+            }, 2000);
+        });
+
+        // Scroll-Effekte für die Abschnitte und den Footer
+        document.addEventListener("scroll", () => {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            const videoSection = document.getElementById("video");
+            const textSection = document.getElementById("text");
+            const textSectionRight = document.getElementById("text-right");
+            const footer = document.getElementById("footer");
+
+            // Sanfter Fade-Effekt für das Video
+            const fadeOutStart = windowHeight * 0.2;
+            const fadeOutEnd = windowHeight * 0.4;
+
+            if (scrollPosition > fadeOutStart && scrollPosition <= fadeOutEnd) {
+                const opacity = 1 - (scrollPosition - fadeOutStart) / (fadeOutEnd - fadeOutStart);
+                videoSection.style.opacity = opacity;
+            } else if (scrollPosition > fadeOutEnd) {
+                videoSection.style.opacity = 0;
+                videoSection.style.pointerEvents = "none";
+            } else {
+                videoSection.style.opacity = 1;
+                videoSection.style.pointerEvents = "auto";
+            }
+
+            // Text Section Fade
+            if (scrollPosition > windowHeight * 0.3 && scrollPosition <= windowHeight * 1.2) {
+                textSection.style.opacity = 1;
+                textSection.style.pointerEvents = "auto";
+            } else {
+                textSection.style.opacity = 0;
+                textSection.style.pointerEvents = "none";
+            }
+
+            if (scrollPosition > windowHeight * 1.2) {
+                textSectionRight.style.opacity = 1;
+                textSectionRight.style.pointerEvents = "auto";
+            } else {
+                textSectionRight.style.opacity = 0;
+                textSectionRight.style.pointerEvents = "none";
+            }
+
+            if (scrollPosition + windowHeight >= documentHeight - 400) { // Footer früher anzeigen
+                footer.style.transform = "translateY(0)";
+            } else {
+                footer.style.transform = "translateY(100%)";
+            }
+        });
+    </script>
+</body>
+</html>
