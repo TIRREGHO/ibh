@@ -157,10 +157,31 @@
 
     <!-- Video Section -->
     <div class="video-section" id="video">
-        <video autoplay muted loop>
+       <!-- <video autoplay muted loop>
             <source src="Assets/video.m4v" type="video/mp4">
             Ihr Browser unterstützt kein Video-Tag.
+        </video>-->
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+        <video id="videoPlayer" autoplay muted loop>
+            <!-- Fallback für Browser, die HLS nativ unterstützen (z. B. Safari) -->
+            <source src="Assets/ffmpeg/output.m3u8" type="application/x-mpegURL">
+            <source src="Assets/video.m4v" type="video/mp4">
+            Dein Browser unterstützt kein Video.
         </video>
+        <script>
+            var video = document.getElementById("videoPlayer");
+            if (Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource("Assets/ffmpeg/output.m3u8"); // Lokale HLS-Datei einbinden
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play();
+                });
+            } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+                video.src = "Assets/ffmpeg/output.m3u8"; // Safari nutzt HLS nativ
+            }
+        </script>
     </div>
 
     <!-- Text Section -->
