@@ -22,11 +22,12 @@
         }
         .navbar {
             background-color: #0051A2; /* Gleiche Farbe wie Footer */
-            transform: translateY(-100%);
+            transform: translateY(-120%);
             transition: transform 1s ease;
             position: fixed;
             padding:0px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            
         }
         .navbar .navbar-brand {
             display: flex;
@@ -226,7 +227,8 @@
             const navbar = document.getElementById("navbar");
             setTimeout(() => {
                 navbar.style.transform = "translateY(0)";
-            }, 2000);
+                
+            }, 2500);
         });
 
         // Scroll-Effekte für die Abschnitte und den Footer
