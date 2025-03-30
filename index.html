@@ -172,7 +172,11 @@
         <script>
             var video = document.getElementById("videoPlayer");
             if (Hls.isSupported()) {
-                var hls = new Hls();
+                var hls = new Hls({
+                    maxBufferLength: 30, // Reduzieren Sie den Puffer für schnelleren Start
+                    maxMaxBufferLength: 60, // Obergrenze für den Puffer
+                    startPosition: 0 // Sofortiger Start bei Position 0
+                });
                 hls.loadSource("Assets/ffmpeg/master.m3u8"); // Lokale HLS-Datei einbinden
                 hls.attachMedia(video);
                 hls.on(Hls.Events.MANIFEST_PARSED, function() {
